@@ -4,10 +4,14 @@ import cv2
 import numpy as np
 import torch
 import RRDBNet_arch as arch
+from video_to_frames import video_to_frames
+
+video_to_frames(path="LR_video/test.mp4")
 
 model_path = 'models/RRDB_ESRGAN_x4.pth'  # models/RRDB_ESRGAN_x4.pth OR models/RRDB_PSNR_x4.pth
 device = torch.device('cuda')  # if you want to run on CPU, change 'cuda' -> cpu
 # device = torch.device('cpu')
+
 
 test_img_folder = 'LR/*'
 
